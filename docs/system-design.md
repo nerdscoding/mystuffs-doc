@@ -10,7 +10,30 @@
 erDiagram
   Application ||--|| Data-Storage : "persist data"
   Data-Storage ||--|| Browser-Storage : "delegate & manage"
-  Data-Storage ||--o| Server-Storage: "delegate & manage"
+  Data-Storage ||--o| Server: "delegate & manage"
+```
+
+```mermaid
+sequenceDiagram
+  participant A as Application
+  participant D as Data-Storage
+  participant B as Browser-Storage
+  participant S as Server
+  A->>D: App start with user signed-in
+  D->>S: fetch user data
+  S-->>D: User data
+  D->>B: compare and merge
+  B-->>D: Done!
+  D-->>A: Done!
+  A->>D: Data update
+  par
+    D->>B: update
+    B-->>D: Done!
+  and
+    D->>S: update
+    S-->>D: Done!
+  end
+  D-->>A: Done!
 ```
 
 ### Network and distribution model
