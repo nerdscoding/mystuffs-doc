@@ -7,10 +7,10 @@
 ### Data persistent model
 
 ```mermaid
-erDiagram
-  Application ||--|| Data-Storage : "persist data"
-  Data-Storage ||--|| Browser-Storage : "delegate & manage"
-  Data-Storage ||--o| Server: "delegate & manage"
+flowchart TD
+  A(Application) -- "persist data" --> B(Data-Storage)
+  B -- "delegate & manage" --> C(Browser storage)
+  B -- "delegate & manage" --> D(Data storage)
 ```
 
 ```mermaid
