@@ -9,7 +9,7 @@ erDiagram
   Data-Storage ||--o| Server-Storage: "delegate & manage"
 ```
 
-### Network and distribution module
+### Network and distribution model
 
 ```mermaid
 flowchart LR
