@@ -1,2 +1,7 @@
 # mystuffs-doc
-Documentation of MyStuffs
+Documentation of mystuffs.
+
+### Table of contents
+* [Functional requirements](.docs/docs/functional-requirements.md)
+* [System design](./docs/system-design.md)
+* [Tech stack](./docs/tech-stack.md)
